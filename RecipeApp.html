@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+    <h1></h1>
+    <div>
+        <button onclick="runApp()" id="myBtn">Populate Recipes</button>
+        <div id="recTable">
+        </div>
+    </div>
+    <script type="text/javascript">
+        function runApp(){
+        recipes = [ { title: 'Walnut Bacon Vegetable Combo',
+href: 'http://www.kraftfoods.com/kf/recipes/walnut-bacon-vegetable-combo-50433.aspx',
+ingredients: 'bacon,butter,frozen mixed vegetables,parmesan cheese,walnut',
+thumbnail: 'http://img.recipepuppy.com/640406.jpg' },
+{ title: 'Grilled Vegetable Sandwich with Egg Salad and Bacon',
+href: 'http://www.chow.com/recipes/10937',
+ingredients: 'asparagus,bacon,bread,green onion,salad greens',
+thumbnail: 'http://img.recipepuppy.com/502335.jpg' },
+{ title: 'Hot And Creamy Vegetable Dip Recipe',
+href: 'http://cookeatshare.com/recipes/hot-and-creamy-vegetable-dip-2221',
+ingredients: 'bacon,crackers,monterey jack cheese,ricotta cheese,soup mix',
+thumbnail: 'http://img.recipepuppy.com/855785.jpg' },
+{ title: 'Garden Vegetable Chopped Salad',
+href: 'http://www.kraftfoods.com/kf/recipes/garden-vegetable-chopped-salad-112883.aspx',
+ingredients: 'bacon,broccoli,carrot,cheddar cheese,ranch dressing,romaine lettuce',
+thumbnail: 'http://img.recipepuppy.com/642673.jpg' },
+{ title: 'Powerhouse Vegetable Medley',
+href: 'http://www.kraftfoods.com/kf/recipes/powerhouse-vegetable-medley-69199.aspx',
+ingredients: 'bacon,balsamic vinaigrette,broccoli,carrot,monterey jack cheese,spinach',
+thumbnail: 'http://img.recipepuppy.com/641762.jpg' },
+{ title: 'Powerhouse Vegetable Medley',
+href: 'http://www.kraftfoods.com/kf/recipes/powerhouse-vegetable-medley-69199.aspx?cm_re=1-_-1-_-RecipeAlsoEnjoy',
+ingredients: 'bacon,balsamic vinaigrette,broccoli,carrot,monterey jack cheese,spinach',
+thumbnail: 'http://img.recipepuppy.com/685348.jpg' },
+{ title: 'Vegetable Salad (Spinach) Recipe',
+href: 'http://cookeatshare.com/recipes/vegetable-salad-spinach-58605',
+ingredients: 'bacon,eggs,lettuce,peas,shallot,spinach',
+thumbnail: 'http://img.recipepuppy.com/746024.jpg' },
+{ title: '&quot;Vegetable Salad&quot; Recipe',
+href: 'http://cookeatshare.com/recipes/vegetable-salad-58359',
+ingredients: 'bacon,broccoli,cauliflower,mayonnaise,red onions,sugar',
+thumbnail: 'http://img.recipepuppy.com/786789.jpg' },
+{ title: 'Macaroni Vegetable Salad Recipe',
+href: 'http://cookeatshare.com/recipes/macaroni-vegetable-salad-50354',
+ingredients: 'bacon,elbow macaroni,onion rings,salad dressing,salt,vegetable',
+thumbnail: 'http://img.recipepuppy.com/820669.jpg' },
+{ title: 'Vegetable Salad Recipe',
+href: 'http://cookeatshare.com/recipes/vegetable-salad-49711',
+ingredients: 'bacon,broccoli,cauliflower,raisins,red onions,sunflower seed',
+thumbnail: 'http://img.recipepuppy.com/841466.jpg' } ]
+        var txt = "";
+        txt += "<table>";
+        txt += "<thead><th>Title</th><th>Href</th><th>Ingredients</th><th>Thumbnail</th></thead><tbody>";
+        for (var i = 0; i < recipes.length; i++) {
+            txt += "<tr>";
+            txt += "<td>" + recipes[i].title + "</td>";
+            txt += "<td>" + recipes[i].href + "</td>";
+            txt += "<td>" + recipes[i].ingredients + "</td>";
+            txt += "<td>" + recipes[i].thumbnail + "</td>";
+            txt += "</tr>";
+        }
+        txt += "</tbody></table>"
+        document.getElementById("recTable").innerHTML = txt;
+    }
+    </script>
+</body>
+
+</html>
